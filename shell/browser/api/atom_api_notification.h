@@ -53,6 +53,7 @@ class Notification : public mate::TrackableObject<Notification>,
   base::string16 GetBody() const;
   bool GetSilent() const;
   bool GetHasReply() const;
+  base::string16 GetTimeoutType() const;
   base::string16 GetReplyPlaceholder() const;
   base::string16 GetSound() const;
   std::vector<electron::NotificationAction> GetActions() const;
@@ -64,6 +65,7 @@ class Notification : public mate::TrackableObject<Notification>,
   void SetBody(const base::string16& new_body);
   void SetSilent(bool new_silent);
   void SetHasReply(bool new_has_reply);
+  void SetTimeoutType(const base::string16& new_timeout_type);
   void SetReplyPlaceholder(const base::string16& new_reply_placeholder);
   void SetSound(const base::string16& sound);
   void SetActions(const std::vector<electron::NotificationAction>& actions);
@@ -78,6 +80,7 @@ class Notification : public mate::TrackableObject<Notification>,
   bool has_icon_ = false;
   bool silent_ = false;
   bool has_reply_ = false;
+  base::string16 timeout_type_;
   base::string16 reply_placeholder_;
   base::string16 sound_;
   std::vector<electron::NotificationAction> actions_;
