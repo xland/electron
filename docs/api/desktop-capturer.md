@@ -90,7 +90,6 @@ The `desktopCapturer` module has the following methods:
     the type screen.
 
 Returns `Promise<DesktopCapturerSource[]>` - Resolves with an array of [`DesktopCapturerSource`](structures/desktop-capturer-source.md) objects, each `DesktopCapturerSource` represents a screen or an individual window that can be captured.
-
 This method can only be used after the `ready` event of the `app` module gets emitted.
 
 [`navigator.mediaDevices.getUserMedia`]: https://developer.mozilla.org/en/docs/Web/API/MediaDevices/getUserMedia
